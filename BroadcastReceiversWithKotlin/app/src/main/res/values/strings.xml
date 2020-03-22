@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BroadcastReceiversWithKotlin</string>
+    <string name="broadcast_now">First Receiver</string>
+    <string name="second_receiver">Second Receiver</string>
 </resources>
