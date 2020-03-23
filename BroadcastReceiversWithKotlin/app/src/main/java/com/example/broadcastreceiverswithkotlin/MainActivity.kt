@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
     fun sendBroadcastFirstReceiver(view: View) {
         val intent = Intent(this, FirstReceiver::class.java) // directly name
+        intent.putExtra("name","okan")
+        intent.putExtra("age",32)
         sendBroadcast(intent)
         /** you can call broadcastReceivers two different ways.
          *  directly name
