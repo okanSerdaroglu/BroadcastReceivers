@@ -9,11 +9,16 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+/** in android system messages go from operating system to android apps.
+ *  if your app listen to this messages you can do what ever you want as
+ *  a result of this receiver, in onReceive method.
+ */
 
-    companion object {
-        private val TAG = MainActivity::class.java.simpleName
-    }
+/** if receiver's action names are the same, receivers work according to their
+ *  queue in android manifest.
+ */
+
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,13 +26,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun sendBroadcastFirstReceiver(view: View) {
-        val intent = Intent(this, FirstReceiver::class.java)
+        val intent = Intent(this, FirstReceiver::class.java) // directly name
         sendBroadcast(intent)
+        /** you can call broadcastReceivers two different ways.
+         *  directly name
+         *  with action name
+         */
     }
 
     fun sendBroadcastSecondReceiver(view: View) {
-        val intent = Intent(this,SecondReceiver::class.java)
+        val intent = Intent("second.custom.action") // action name
         sendBroadcast(intent)
+        /** action name must be the same in android manifest **/
     }
 
     class SecondReceiver : BroadcastReceiver() {
@@ -37,11 +47,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onReceive(context: Context?, intent: Intent?) {
-            Log.i(TAG,"from second receiver")
+            Log.i(TAG, "from second receiver")
             Toast.makeText(context, TAG, Toast.LENGTH_LONG).show()
         }
 
     }
-
 
 }
