@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DynamicBroadcastReceivers</string>
+    <string name="register_receiver">Register Receiver</string>
+    <string name="unregister_receiver">Unregister Receiver</string>
 </resources>
