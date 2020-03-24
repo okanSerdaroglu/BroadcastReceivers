@@ -34,6 +34,12 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".ForthReceiver">
+            <intent-filter>
+                <action android:name="custom_name"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
