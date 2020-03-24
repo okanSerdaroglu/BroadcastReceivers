@@ -16,6 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".FirstReceiver" >
+            <intent-filter android:priority="10">
+                <action android:name="custom_name"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".MainActivity$SecondReceiver">
+            <intent-filter android:priority="20">
+                <action android:name="custom_name"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".ThirdReceiver">
+            <intent-filter android:priority="30">
+                <action android:name="custom_name"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
