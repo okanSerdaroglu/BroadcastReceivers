@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StickyBroadcastReceivers</string>
+    <string name="register_receiver">Register Receive Without Broadcast</string>
+    <string name="unregister_receiver">Register Receiver With Broadcast</string>
 </resources>
