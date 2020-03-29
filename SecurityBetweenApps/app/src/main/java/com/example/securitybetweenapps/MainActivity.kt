@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
+/** permission name and protectionLevel as signature
+ *  in AndroidManifest. Signature means this permission name
+ *  must be the same with second app
+ */
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
