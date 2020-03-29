@@ -1,0 +1,2 @@
+rootProject.name='SecurityBetweenApps2'
+include ':app'
