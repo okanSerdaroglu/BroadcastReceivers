@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SecurityBetweenApps</string>
+    <string name="send_broadcast_message">Send BroadcastMessage</string>
 </resources>
